@@ -4,7 +4,8 @@ const { v4: uuidv4 } = require('uuid');
 
 /* GET users listing. */
 router.get('/', function (req, res) {
-  res.send('respond with a resource');
+  console.log("I am here now")
+  res.json({message: 'respond with a resource'});
 });
 router.post('/', function (req, res) {
   const { name } = req.body;
