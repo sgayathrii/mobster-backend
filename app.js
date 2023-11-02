@@ -7,12 +7,14 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const mobsRouter = require('./routes/mobs');
 const membersRouter = require('./routes/members');
-
+var corsOptions = {
+  origin: 'https://felicialyden.github.io/mobster-frontend/',
+};
 const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
