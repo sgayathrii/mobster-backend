@@ -5,6 +5,7 @@ import logger from 'morgan';
 import cors from 'cors';
 import indexRouter from './routes/index';
 import usersRouter from './routes/users';
+import mobsRouter from './routes/mobs';
 
 const app = express();
 
@@ -17,7 +18,6 @@ app.use(express.static(join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-console.log('test commit')
+app.use('/mobs', mobsRouter);
 
 export default app;
