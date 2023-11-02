@@ -18,4 +18,6 @@ app.use(express.static(join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+console.log('test commit')
+
 export default app;
