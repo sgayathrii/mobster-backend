@@ -6,9 +6,7 @@ const cors = require('cors');
 const indexRouter = require('./routes/index');
 const mobsRouter = require('./routes/mobs');
 const membersRouter = require('./routes/members');
-var corsOptions = {
-  origin: 'https://felicialyden.github.io/mobster-frontend/',
-};
+var corsOptions = { origin: 'https://felicialyden.github.io/' };
 const app = express();
 
 app.use(logger('dev'));
