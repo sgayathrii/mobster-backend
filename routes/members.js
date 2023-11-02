@@ -7,9 +7,9 @@ router.get('/', function (req, res) {
   res.send('respond with a resource');
 });
 router.post('/', function (req, res) {
-  const { name } = req.body;
+  const { name, mobId} = req.body;
   const id = uuidv4();
-  res.json({ id, name });
+  res.json({ id, name, mobId });
 });
 router.put('/', function (req, res) {
   res.send('respond with a resource');
